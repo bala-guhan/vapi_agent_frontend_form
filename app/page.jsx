@@ -22,7 +22,7 @@ export default function Form() {
     e.preventDefault();
     setMessage(''); // Clear previous message
     try {
-      const res = await fetch('http://localhost:8000/patients/', {
+      const res = await fetch('https://vapiagent-production.up.railway.app/patients', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
